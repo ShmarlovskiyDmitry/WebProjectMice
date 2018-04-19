@@ -1,1 +1,1 @@
-# WebProjectMice
+# WebMICE
