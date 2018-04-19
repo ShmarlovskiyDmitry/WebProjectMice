@@ -1,0 +1,119 @@
+﻿@model MICE.Domain.Entities.User
+
+@{
+    ViewBag.Title = "RegisterUser";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+@using (Html.BeginForm("RegisterUser", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.HiddenFor(x => x.ID)
+    <div>
+        <h3 class="text-center">Регистрация нового пользователя</h3>
+        <p class="text-center">Пожалуйста заполните все поля для регистрации нового пользователя</p>
+    </div>
+        <div class="FormRegister">
+
+            <div class="control-group">
+                <label class="control-label" for="Email">
+                    Фамилия
+                </label>
+                <div class="control">
+                    @Html.ValidationMessage("Фамилия")
+                    @Html.TextBoxFor(x => x.Surname, new { Class = "form-control" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Имя
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Имя")
+                    @Html.TextBoxFor(x => x.Name, new { Class = "form-control" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Отчество
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Отчество")
+                    @Html.TextBoxFor(x => x.MName, new { Class = "form-control" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Email
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Email")
+                    @Html.TextBoxFor(x => x.Email, new { Class = "form-control" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Номер телефона
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Номер телефона")
+                    @Html.TextBoxFor(x => x.Telephone, new { Class = "form-control" })
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Имя пользователя
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Имя пользователя")
+                    @Html.TextBoxFor(x => x.Login, new { Class = "form-control" })
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Пароль
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Пароль")
+                    @Html.TextBoxFor(x => x.Password, new { Class = "form-control" })
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Повторите
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Повторите")
+                    @Html.TextBoxFor(x => x.Password, new { Class = "form-control" })
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="FirstName">
+                    Права доступа
+                </label>
+                <div class="controls">
+                    @Html.ValidationMessage("Права доступа")
+                    @Html.TextBoxFor(x => x.Rules, new { Class = "form-control" })
+                </div>
+            </div>
+          
+            
+            
+            
+            <div class="btn_fnc">
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        Регистрация
+                    </button>
+                    @Html.ActionLink("Отмена", "UserList", null, null, new { @class = "btn" })
+                </div>
+            </div>
+
+        </div>
+}
+

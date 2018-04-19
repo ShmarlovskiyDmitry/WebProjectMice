@@ -1,0 +1,114 @@
+﻿body {
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    padding: 5px;
+    height: 53px;
+    background-color: white;
+}
+
+.navmenuadmin {
+    background-color: #383434;
+    width: 170px;
+    height: 100%;
+    float: left;
+    padding: 5px;
+    
+}
+
+.contentadmin {
+    background-color: white;
+    width: 84%;
+    height: 100%;
+    float: right;
+    padding: 5px;
+    margin-right: 50px;
+}
+
+.containeradmin {
+    background-color: #fdfafa;
+    width: 100%;
+}
+
+.headeradmin {
+    padding-bottom: 9px;
+    
+    background-color: #383434;
+    padding: 5px;
+    padding-left: 50px;
+}
+
+
+.footeradmin {
+    background-color: #383434;
+    color: white;
+    width: 100%;
+    float: left;
+}
+
+.usertable {
+}
+
+.FormRegister {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    padding-left: 30%;
+}
+
+.control-group {
+    padding-bottom: 0px;
+}
+
+.btn_fnc {
+    padding-top: 10px;
+}
+
+form-control {
+    width: 500px;
+}
+
+input {
+    max-width: 500px;
+}
+
+.radbut {
+    display: inline-flex;
+}
+
+.radio label, .checkbox label {
+    display: inline-flex;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.funct_usr {
+    width: 100%;
+}
+
+.funct_usr_list {
+    width: 100%;
+    display: inline-flex;
+}
+
+.continf {
+    padding-left: 340px;
+    padding-right: 320px;
+   
+}

@@ -1,0 +1,92 @@
+﻿@model MICE.Domain.Entities.User
+
+@{
+    ViewBag.Title = "InfoUser";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+<div>
+    <h3 class="text-center">Информация пользователя</h3>
+    <p class="text-center">Здесь представлена вся информация указанная при регистрации пользователя</p>
+</div>
+
+
+
+<div class="continf">
+    <div class="funct_usr ">
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    Фамилия
+                </th>
+                <td>
+                    @Model.Surname
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Имя
+                </th>
+                <td>
+                    @Model.Name
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Отчество
+                </th>
+                <td>
+                    @Model.MName
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Имя пользователя
+                </th>
+                <td>
+                    @Model.Login
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Номер телефона
+                </th>
+                <td>
+                    @Model.Telephone
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Электронная почта
+                </th>
+                <td>
+                    @Model.Email
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Права доступа
+                </th>
+                <td>
+                    @if (Model.Rules == "0")
+                    { <p>Администратор</p>}
+                    @if (Model.Rules == "1")
+                    { <p>Модератор</p>}
+
+                </td>
+            </tr>
+        </table>
+
+        @using (Html.BeginForm("Delete", "Admin"))
+        {
+            <button type="button" class="btn btn-primary">Изменить</button>
+            <button type="button" class="btn btn-primary">Блокировать</button>
+            @Html.Hidden("ID", Model.ID)
+            <input type="submit" value="Удалить" class="btn btn-primary">
+        }
+
+    </div>
+</div>

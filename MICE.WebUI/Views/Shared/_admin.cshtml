@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администрирования</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="containeradmin">
+        <div class="headeradmin">
+            <h4 style="color:white">Admin Control Panel</h4>
+        </div>
+        <div class="navmenuadmin">
+            <ul class="nav nav-pills nav-stacked ">
+                <li> @Html.ActionLink("Записи", "NewsList", "Admin")</li>
+                <li>@Html.ActionLink("Медиафайлы", "Index", "Admin")</li>
+                <li>
+                    @Html.ActionLink("MICE", "Index", "Admin")
+                <ul>
+                    <li>@Html.ActionLink("Мероприятия", "Index", "Admin")</li>
+                    <li>@Html.ActionLink("Участники", "Index", "Admin")</li>
+                    <li>@Html.ActionLink("Заявки", "Index", "Admin")</li>
+                </ul>
+
+
+            </li>
+            <li>@Html.ActionLink("Страницы", "Index", "Admin")</li>
+            <li> @Html.ActionLink("Пользователи", "UserList", "Admin")</li>
+            <li> @Html.ActionLink("Настройки", "Index", "Admin")</li>
+        </ul>
+    </div>
+    <div class="contentadmin">
+        @RenderBody()
+    </div>
+    <div class="footeradmin" style="text-align:center">
+        <h6>Панель администрирования сайта</h6>
+        <h6>Design by VIP Tours 2018</h6>
+    </div>
+</div>
+
+</body>
+</html>
+
+
